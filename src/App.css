@@ -1,0 +1,84 @@
+:root {
+    --color-body:white;
+    --color-card-container: gainsboro;
+    --color-card-down: #3BB175;
+    --color-card-up:  #B5F098;
+    --color-card-selected: #FF8F1c;
+    --color-border-container: rgba(255, 0, 0, 0.247);
+    --color-icon:rgba(0, 0, 255, 0.527);
+    --color-shadow: purple;
+    --color-border-card: rgba(0, 0, 0, 0.356);
+    --color-title-text: steelblue;
+}
+
+:root:has(input:checked) .bodi_button{
+    --color-body:black;
+    --color-card-container:lightslategray;
+    --color-card-down: thistle;
+    --color-card-up:  steelblue;
+    --color-card-selected:rgba(172, 255, 47, 0.568);
+    --color-border-container: rgba(43, 255, 0, 0.548);
+    --color-icon:moccasin;
+    --color-shadow: goldenrod;
+    --color-border-card:  rgba(43, 255, 0, 0.548);
+    --color-title-text: rgb(43, 255, 0);
+}
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    background-color: var(--color-body);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.switch {
+    width: 60px;
+    border-radius: 15px;
+    background-color: var(--color-card-container);
+    color: var(--color-title-text);
+    margin-top: 1px;
+    margin-left: 500px;
+}
+.title {
+    color:var(--color-title-text);
+    padding-bottom: 20px;
+}
+
+.cards-container {    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    height: 500px;
+    width: 500px;
+    margin: 0 auto;
+    padding: 10px;
+    gap: 10px;
+    border: 3px solid var(--color-border-container);
+    background-color: var(--color-card-container);    
+}
+
+.card {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    border-radius: 50%;
+    color: var(--color-icon);
+    border: 1px solid var(--color-border-card);
+    box-shadow: 0 5px 5px 0 var(--color-shadow, --color-shadow-2);
+}
+
+.card.down {
+    background: var(--color-card-down);
+}
+
+.card.up {
+    background-color: var(--color-card-up);
+}
+.card.selected {
+    background-color: var(--color-card-selected);
+}
