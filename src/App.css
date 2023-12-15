@@ -1,5 +1,5 @@
 :root {
-    --color-body: rgba(194, 193, 243, 0.137);
+    --color-body: rgba(194, 193, 243, 0.527);
     --color-card-container: white;
     --color-card-down: hsla(40, 10%, 6%, 0.822);
     --color-card-up:  rgb(50, 105, 206);
@@ -8,7 +8,7 @@
     --color-icon: white;
     --color-shadow: aliceblue;
     --color-border-card:rgb(67, 103, 139);
-    --color-title-text: black;
+    --color-title-text: hsl(354, 78%, 60%);
 }
 
 :root:has(input:checked) .bodi_button{
@@ -21,7 +21,7 @@
     --color-icon:rgb(50, 105, 206);
     --color-shadow: hsla(27, 15%, 12%, 0.411);
     --color-border-card:  lightslategray;
-    --color-title-text: aliceblue;
+    --color-title-text: rgb(199, 202, 225);
 }
 * {
     padding: 0;
