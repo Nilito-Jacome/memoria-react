@@ -9,8 +9,22 @@
   </head>
   <body class="bodi bodi_button">    
     <div class="switch">
-      <input type="checkbox" id="check">Mode
+      <Input type="checkbox" id="check">
+        <label id="label" for="check"> LightMode</label>
     </div>
+    <!--  Esta funcion sirve para dar y cambiar el nombre al boton del cambio de modo claro a obscuro con un script -->
+    <script>{
+      function Mode () {
+        let label = document.getElementById("label")
+        let input = document.getElementById("check")
+        if (input.checked) {
+          label.textContent = "DarkMode"
+        } else{
+          label.textContent = "LightMode"
+        }
+      }
+      document.getElementById("check").addEventListener("click", Mode)
+    }</script>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

@@ -1,27 +1,27 @@
 :root {
-    --color-body:white;
-    --color-card-container: gainsboro;
-    --color-card-down: #3BB175;
-    --color-card-up:  #B5F098;
-    --color-card-selected: #FF8F1c;
-    --color-border-container: rgba(255, 0, 0, 0.247);
-    --color-icon:rgba(0, 0, 255, 0.527);
-    --color-shadow: purple;
-    --color-border-card: rgba(0, 0, 0, 0.356);
-    --color-title-text: steelblue;
+    --color-body: rgba(94, 91, 235, 0.137);
+    --color-card-container: white;
+    --color-card-down: hsla(40, 10%, 6%, 0.822);
+    --color-card-up:  rgb(50, 105, 206);
+    --color-card-selected: hsl(354, 78%, 60%);
+    --color-border-container: black;
+    --color-icon: white;
+    --color-shadow: aliceblue;
+    --color-border-card:rgb(67, 103, 139);
+    --color-title-text: black;
 }
 
 :root:has(input:checked) .bodi_button{
-    --color-body:black;
-    --color-card-container:lightslategray;
-    --color-card-down: thistle;
-    --color-card-up:  steelblue;
-    --color-card-selected:rgba(172, 255, 47, 0.568);
-    --color-border-container: rgba(43, 255, 0, 0.548);
-    --color-icon:moccasin;
-    --color-shadow: goldenrod;
-    --color-border-card:  rgba(43, 255, 0, 0.548);
-    --color-title-text: rgb(43, 255, 0);
+    --color-body: black;
+    --color-card-container:rgb(72.9, 76.9, 93.3);
+    --color-card-down: hsla(40, 10%, 6%, 0.822);
+    --color-card-up:  hsl(354, 78%, 60%);
+    --color-card-selected:rgb(199, 202, 225);
+    --color-border-container: white;;
+    --color-icon:rgb(50, 105, 206);
+    --color-shadow: hsla(27, 15%, 12%, 0.411);
+    --color-border-card:  lightslategray;
+    --color-title-text: aliceblue;
 }
 * {
     padding: 0;
@@ -36,28 +36,32 @@ body {
     text-align: center;
 }
 .switch {
-    width: 60px;
+    width: 160px;
     border-radius: 15px;
     background-color: var(--color-card-container);
     color: var(--color-title-text);
-    margin-top: 1px;
-    margin-left: 500px;
+    margin-top: 10px;
+    margin-left: 540px;
+    font-weight: 700;
+    font-size: 25px;
 }
 .title {
     color:var(--color-title-text);
-    padding-bottom: 20px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    font-size: 50px;
 }
 
 .cards-container {    
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    height: 500px;
-    width: 500px;
+    height: 700px;
+    width: 700px;
     margin: 0 auto;
     padding: 10px;
     gap: 10px;
-    border: 3px solid var(--color-border-container);
+    border: 1px solid var(--color-border-container);
     background-color: var(--color-card-container);    
 }
 
@@ -65,11 +69,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 60px;
+    font-size: 110px;
     border-radius: 50%;
     color: var(--color-icon);
     border: 1px solid var(--color-border-card);
-    box-shadow: 0 5px 5px 0 var(--color-shadow, --color-shadow-2);
 }
 
 .card.down {
@@ -81,4 +84,105 @@ body {
 }
 .card.selected {
     background-color: var(--color-card-selected);
+}
+
+@media screen and (max-width: 1024px) {
+    .switch {
+        margin-top: 10px;
+        width: 140px;        
+        margin-left: 450px;
+        font-weight: 700;
+        font-size: 20px;
+    }
+    .title {
+        margin-top: 10px;
+        padding-bottom: 10px;
+        font-size: 40px;
+    }
+    .cards-container {    
+        height: 600px;
+        width: 600px;  
+    }
+    .card {    
+        font-size: 90px;
+    }
+}
+@media screen and (max-width: 770px) {
+    .switch {
+        margin-top: 10px;
+        width: 120px;        
+        margin-left: 380px;
+        font-weight: 700;
+        font-size: 16px;
+    }
+    .title {
+        margin-top: 10px;
+        padding-bottom: 10px;
+        font-size: 32px;
+    }
+    .cards-container {    
+        height: 500px;
+        width: 500px;  
+    }
+    .card {    
+        font-size: 70px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .switch {
+        margin-top: 10px;
+        width: 110px;        
+        margin-left: 290px;
+        font-weight: 700;
+        font-size: 15px;
+    }
+    .title {
+        margin-top: 10px;
+        padding-bottom: 10px;
+        font-size: 30px;
+    }
+    .cards-container {    
+        height: 400px;
+        width: 400px;  
+    }
+    .card {    
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .switch {  
+        width: 100px;      
+        margin-left: 250px;
+        font-size: 13px;
+    }
+    .title {
+        font-size: 26px;
+    }
+    .cards-container {    
+        height: 350px;
+        width: 350px;  
+    }
+    .card {    
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .switch {     
+        width: 80px;   
+        margin-left: 220px;
+        font-size: 10px;
+    }
+    .title {
+        font-size: 20px;
+    }
+    .cards-container {    
+        height: 300px;
+        width: 300px;  
+    }
+    .card {    
+        font-size: 35px;
+    }
 }
